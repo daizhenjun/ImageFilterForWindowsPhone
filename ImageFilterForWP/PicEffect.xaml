@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="ImageFilterForWP.PicEfffect"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ImageFilterForWP.ViewModels" 
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" 
+    xmlns:controlsToolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="Red"
+    Loaded="PhoneApplicationPage_Loaded" 
+    Background="Red"
+    shell:SystemTray.IsVisible="True"
+    >
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True">
+            <shell:ApplicationBarIconButton Text="Choose" IconUri="/icons/search.png" Click="ApplicationBarIconFolderButton_Click"/>
+            <shell:ApplicationBarIconButton Text="Take" IsEnabled="False" IconUri="/icons/camera.png" Click="ApplicationBarIconCameraButton_Click"/>
+            <shell:ApplicationBarIconButton Text="Save"  IconUri="/icons/save.png" Click="ApplicationBarIconSaveButton_Click"/>
+           
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <Grid x:Name="LayoutRoot"  >
+        <Controls:Pivot Name="PivotCtrl" Foreground="Red">
+
+            <Controls:PivotItem Name="PivotItemPic" Header="图片" >
+                <Grid VerticalAlignment="Top" Margin="14, 0, 0, 0" >
+                    <Grid Name="ViewportContainer" >
+                        <Image Name="Viewport" LayoutUpdated="Viewport_LayoutUpdated" Width="480" Height="600" />
+                    </Grid>
+                    <ProgressBar Name="ProgessBar" 
+                            IsIndeterminate="True" 
+                            Height="20" Width="200" 
+                            Visibility="Collapsed" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" 
+                            />
+                </Grid>
+            </Controls:PivotItem>
+
+            <Controls:PivotItem  Name="PivotItemFx" Header="效果" >
+                <Controls:PivotItem.Resources>
+                    <vm:EffectItems x:Key="effects"/>
+                </Controls:PivotItem.Resources>
+                <ListBox Name="ListBoxEffects" SelectionMode="Single" ItemsSource="{StaticResource effects}" SelectionChanged="ListBox_SelectionChanged" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <controlsToolkit:WrapPanel ItemWidth="152" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" Margin="14,0,0,10" >
+                                <Image Source="{Binding Thumbnail}" Width="128" Height="128" />
+                                <TextBlock Text="{Binding Name}" FontSize="{StaticResource PhoneFontSizeNormal}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Controls:PivotItem>
+
+        </Controls:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8968AC58-7E85-45BA-8FC8-3B216F330E4F}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageFilterForWP</RootNamespace>
+    <AssemblyName>ImageFilterForWP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ImageFilterForWP.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ImageFilterForWP.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="WriteableBitmapExWinPhone, Version=0.9.7.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EffectItem.cs" />
+    <Compile Include="EffectItems.cs" />
+    <Compile Include="ImageFilter\AutoAdjustFilter.cs" />
+    <Compile Include="ImageFilter\AutoLevelFilter.cs" />
+    <Compile Include="ImageFilter\BannerFilter.cs" />
+    <Compile Include="ImageFilter\BigBrotherFilter.cs" />
+    <Compile Include="ImageFilter\BlackWhiteFilter.cs" />
+    <Compile Include="ImageFilter\BlockPrintFilter.cs" />
+    <Compile Include="ImageFilter\BrickFilter.cs" />
+    <Compile Include="ImageFilter\BrightContrastFilter.cs" />
+    <Compile Include="ImageFilter\ColorQuantizeFilter.cs" />
+    <Compile Include="ImageFilter\ConvolutionFilter.cs" />
+    <Compile Include="ImageFilter\EdgeFilter.cs" />
+    <Compile Include="ImageFilter\FeatherFilter.cs" />
+    <Compile Include="ImageFilter\GaussianBlurFilter.cs" />
+    <Compile Include="ImageFilter\GradientFilter.cs" />
+    <Compile Include="ImageFilter\GradientMapFilter.cs" />
+    <Compile Include="ImageFilter\HistogramEqualFilter.cs" />
+    <Compile Include="ImageFilter\IImageFilter.cs" />
+    <Compile Include="ImageFilter\Image.cs" />
+    <Compile Include="ImageFilter\ImageBlender.cs" />
+    <Compile Include="ImageFilter\InvertFilter.cs" />
+    <Compile Include="ImageFilter\LightFilter.cs" />
+    <Compile Include="ImageFilter\MistFilter.cs" />
+    <Compile Include="ImageFilter\MonitorFilter.cs" />
+    <Compile Include="ImageFilter\MosaicFilter.cs" />
+    <Compile Include="ImageFilter\NeonFilter.cs" />
+    <Compile Include="ImageFilter\NightVisionFilter.cs" />
+    <Compile Include="ImageFilter\NoiseFilter.cs" />
+    <Compile Include="ImageFilter\OilPaintFilter.cs" />
+    <Compile Include="ImageFilter\OldPhotoFilter.cs" />
+    <Compile Include="ImageFilter\ParamEdgeDetectFilter.cs" />
+    <Compile Include="ImageFilter\PixelateFilter.cs" />
+    <Compile Include="ImageFilter\RadialDistortionFilter.cs" />
+    <Compile Include="ImageFilter\RainBowFilter.cs" />
+    <Compile Include="ImageFilter\RectMatrixFilter.cs" />
+    <Compile Include="ImageFilter\ReflectionFilter.cs" />
+    <Compile Include="ImageFilter\ReliefFilter.cs" />
+    <Compile Include="ImageFilter\SaturationModifyFilter.cs" />
+    <Compile Include="ImageFilter\SepiaFilter.cs" />
+    <Compile Include="ImageFilter\SmashColorFilter.cs" />
+    <Compile Include="ImageFilter\ThresholdFilter.cs" />
+    <Compile Include="ImageFilter\TintFilter.cs" />
+    <Compile Include="ImageFilter\VignetteFilter.cs" />
+    <Compile Include="ImageFilter\VintageFilter.cs" />
+    <Compile Include="ImageFilter\WaterWaveFilter.cs" />
+    <Compile Include="ImageFilter\XRadiationFilter.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PicEffect.xaml.cs">
+      <DependentUpon>PicEffect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WriteableBitmapMediaLibraryExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PicEffect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\save.png" />
+    <Content Include="icons\search.png" />
+    <Content Include="icons\camera.png" />
+    <Content Include="icons\autoadjust_filter.jpg" />
+    <Content Include="icons\banner_filter1.jpg" />
+    <Content Include="icons\banner_filter2.jpg" />
+    <Content Include="icons\bigbrother_filter.jpg" />
+    <Content Include="icons\blackwhite_filter.jpg" />
+    <Content Include="icons\blockprint_filter.jpg" />
+    <Content Include="icons\brick_filter.jpg" />
+    <Content Include="icons\brightcontrast_filter.jpg" />
+    <Content Include="icons\colorquantize_filter.jpg" />
+    <Content Include="icons\edge_filter.jpg" />
+    <Content Include="icons\feather_filter.jpg" />
+    <Content Include="icons\gaussianblur_filter.jpg" />
+    <Content Include="icons\invert_filter.jpg" />
+    <Content Include="icons\light_filter.jpg" />
+    <Content Include="icons\mist_filter.jpg" />
+    <Content Include="icons\monitor_filter.jpg" />
+    <Content Include="icons\mosaic_filter.jpg" />
+    <Content Include="icons\neon_filter.jpg" />
+    <Content Include="icons\nightvision_filter.jpg" />
+    <Content Include="icons\noisefilter.jpg" />
+    <Content Include="icons\oilpaint_filter.jpg" />
+    <Content Include="icons\oldphoto_filter.jpg" />
+    <Content Include="icons\pixelate_filter.jpg" />
+    <Content Include="icons\radialdistortion_filter.jpg" />
+    <Content Include="icons\rainbow_filter.jpg" />
+    <Content Include="icons\rectmatrix_filter.jpg" />
+    <Content Include="icons\reflection1_filter.jpg" />
+    <Content Include="icons\reflection2_filter.jpg" />
+    <Content Include="icons\relief_filter.jpg" />
+    <Content Include="icons\saturationmodify_filter.jpg" />
+    <Resource Include="icons\sepia_filter.jpg" />
+    <Content Include="icons\smashcolor_filter.jpg" />
+    <Content Include="icons\threshold_filter.jpg" />
+    <Content Include="icons\tint_filter.jpg" />
+    <Content Include="icons\vignette_filter.jpg" />
+    <Content Include="icons\vintage_filter.jpg" />
+    <Content Include="icons\waterwave_filter.jpg" />
+    <Content Include="icons\xradiation_filter.jpg" />
+    <Content Include="RefDll\System.Windows.Controls.dll" />
+    <Content Include="RefDll\WriteableBitmapExWinPhone.dll" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
