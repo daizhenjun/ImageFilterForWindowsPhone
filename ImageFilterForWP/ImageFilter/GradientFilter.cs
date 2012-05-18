@@ -160,6 +160,52 @@ namespace HaoRan.ImageFilter
             colors.Add(Colors.Black);
             return new Gradient(colors);
         }
+
+        public static Gradient Fade()
+        {
+            List<Color> colors = new List<Color>();
+            colors.Add(Colors.Black);
+            colors.Add(Color.FromArgb(255, 0xEE, 0xE8, 0xCD));//Cornsilk2  , reference http://www.wescn.com/tool/color_3.html
+            colors.Add(Colors.Black);
+            return new Gradient(colors);
+        }
+
+        public static Gradient Scene()
+        {
+            List<Color> colors = new List<Color>();
+            colors.Add(Color.FromArgb(255, 0xFF, 0xD7, 0x00));//Gold  , reference http://www.wescn.com/tool/color_3.html
+            colors.Add(Colors.White);
+            colors.Add(Color.FromArgb(255, 0xFF, 0xD7, 0x00));//Gold
+            return new Gradient(colors);
+        }
+
+        public static Gradient Scene1()
+        {
+            List<Color> colors = new List<Color>();
+            colors.Add(Color.FromArgb(255, 0x64, 0x95, 0xED));//CornflowerBlue  , reference http://www.wescn.com/tool/color_3.html
+            colors.Add(Colors.White);
+            colors.Add(Color.FromArgb(255, 0x64, 0x95, 0xED));//CornflowerBlue
+            return new Gradient(colors);
+        }
+
+       
+        public static Gradient Scene2()
+        {
+            List<Color> colors = new List<Color>();
+            colors.Add(Color.FromArgb(255, 0x00, 0xBF, 0xFF));//DeepSkyBlue  , reference http://www.wescn.com/tool/color_3.html
+            colors.Add(Color.FromArgb(255, 0xDC, 0xDC, 0xDC));//Gainsboro
+            colors.Add(Color.FromArgb(255, 0x00, 0xBF, 0xFF));//DeepSkyBlue
+            return new Gradient(colors);
+        }
+
+        public static Gradient Scene3()
+        {
+            List<Color> colors = new List<Color>();
+            colors.Add(Colors.Orange);// , reference http://www.wescn.com/tool/color_3.html
+            colors.Add(Colors.White);
+            colors.Add(Colors.Orange);//
+            return new Gradient(colors);
+        }
     }
 
 

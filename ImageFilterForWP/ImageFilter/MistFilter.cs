@@ -20,7 +20,6 @@ namespace HaoRan.ImageFilter
 {
     public class MistFilter : IImageFilter
     {
-
         //@Override
         public Image process(Image imageIn)
         {

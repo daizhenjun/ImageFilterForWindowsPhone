@@ -20,7 +20,7 @@ namespace HaoRan.ImageFilter
 {
     public class GaussianBlurFilter : IImageFilter
     {
-        private static int Padding = 3;
+        protected static int Padding = 3;
 
         /// <summary>
         /// The bluriness factor. 
@@ -28,7 +28,7 @@ namespace HaoRan.ImageFilter
         /// </summary>
         public float Sigma = 0.75f;
 
-        float[] ApplyBlur(float[] srcPixels, int width, int height)
+        protected float[] ApplyBlur(float[] srcPixels, int width, int height)
         {
             float[] destPixels = new float[srcPixels.Length];
             System.Array.Copy(srcPixels, 0, destPixels, 0, srcPixels.Length);
@@ -64,7 +64,7 @@ namespace HaoRan.ImageFilter
             return destPixels;
         }
 
-        void ApplyPass(float[] pixels, int width, int height, float b0, float b1, float b2, float b3, float b)
+        protected void ApplyPass(float[] pixels, int width, int height, float b0, float b1, float b2, float b3, float b)
         {
             float num = 1f / b0;
             int triplewidth = width * 3;
@@ -87,7 +87,7 @@ namespace HaoRan.ImageFilter
         }
 
 
-        void Transpose(float[] input, float[] output, int width, int height)
+        protected void Transpose(float[] input, float[] output, int width, int height)
         {
             for (int i = 0; i < height; i++)
             {
@@ -103,7 +103,7 @@ namespace HaoRan.ImageFilter
         }
 
 
-        float[] ConvertImageWithPadding(Image imageIn, int width, int height)
+        protected float[] ConvertImageWithPadding(Image imageIn, int width, int height)
         {
             int newheight = height + Padding * 2;
             int newwidth = width + Padding * 2;
@@ -147,7 +147,7 @@ namespace HaoRan.ImageFilter
         }
 
         //@Override
-        public Image process(Image imageIn)
+        public virtual Image process(Image imageIn)
         {
             int width = imageIn.getWidth();
             int height = imageIn.getHeight();
