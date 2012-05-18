@@ -80,6 +80,7 @@
     <Compile Include="ImageFilter\ComicFilter.cs" />
     <Compile Include="ImageFilter\FilmFilter.cs" />
     <Compile Include="ImageFilter\FocusFilter.cs" />
+    <Compile Include="ImageFilter\LomoFilter.cs" />
     <Compile Include="ImageFilter\PaintBorderFilter.cs" />
     <Compile Include="ImageFilter\ColorQuantizeFilter.cs" />
     <Compile Include="ImageFilter\ConvolutionFilter.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="ImageFilter\ImageBlender.cs" />
     <Compile Include="ImageFilter\InvertFilter.cs" />
     <Compile Include="ImageFilter\LightFilter.cs" />
-    <Compile Include="ImageFilter\LomoEffect.cs" />
     <Compile Include="ImageFilter\MistFilter.cs" />
     <Compile Include="ImageFilter\MonitorFilter.cs" />
     <Compile Include="ImageFilter\MosaicFilter.cs" />

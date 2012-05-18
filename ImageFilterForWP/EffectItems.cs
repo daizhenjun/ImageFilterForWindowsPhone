@@ -67,7 +67,7 @@ namespace ImageFilterForWP.ViewModels
           Add(new EffectItem(new PaintBorderFilter(0x00FF00), "/icons/invert_filter.jpg"));//green
           Add(new EffectItem(new PaintBorderFilter(0x0000FF), "/icons/invert_filter.jpg"));//blue
           Add(new EffectItem(new PaintBorderFilter(0xFFFF00), "/icons/invert_filter.jpg"));//yellow
-          Add(new EffectItem(new LomoEffect(), "/icons/invert_filter.jpg"));
+          Add(new EffectItem(new LomoFilter(), "/icons/invert_filter.jpg"));
           
       }
    }

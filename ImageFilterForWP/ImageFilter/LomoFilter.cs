@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  * HaoRan ImageFilter Classes v0.1
  * Copyright (C) 2012 Zhenjun Dai
  *
@@ -18,7 +18,7 @@
 
 namespace HaoRan.ImageFilter
 {
-    public class LomoEffect : IImageFilter
+    public class LomoFilter : IImageFilter
     {
         private BrightContrastFilter contrastFx = new BrightContrastFilter();
         private GradientMapFilter gradientMapFx  = new GradientMapFilter();
@@ -26,7 +26,7 @@ namespace HaoRan.ImageFilter
         private VignetteFilter vignetteFx = new VignetteFilter();
         private NoiseFilter noiseFx = new NoiseFilter();
 
-        public LomoEffect()
+        public LomoFilter()
         {
             contrastFx.BrightnessFactor = 0.05f;
             contrastFx.ContrastFactor = 0.5f;
