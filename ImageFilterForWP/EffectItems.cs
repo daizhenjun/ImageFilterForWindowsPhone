@@ -11,6 +11,20 @@ namespace ImageFilterForWP.ViewModels
    {
       public EffectItems()
        {
+           //v0.2
+           Add(new EffectItem(new ComicFilter(), "/icons/invert_filter.jpg"));
+           Add(new EffectItem(new SceneFilter(5f, Gradient.Scene()), "/icons/invert_filter.jpg"));
+           Add(new EffectItem(new SceneFilter(5f, Gradient.Scene1()), "/icons/invert_filter.jpg"));
+           Add(new EffectItem(new SceneFilter(5f, Gradient.Scene2()), "/icons/invert_filter.jpg"));
+           Add(new EffectItem(new SceneFilter(5f, Gradient.Scene3()), "/icons/invert_filter.jpg"));
+           Add(new EffectItem(new FilmFilter(80f), "/icons/invert_filter.jpg"));//
+           Add(new EffectItem(new FocusFilter(), "/icons/invert_filter.jpg"));//
+           Add(new EffectItem(new CleanGlassFilter(), "/icons/invert_filter.jpg"));//
+           Add(new EffectItem(new PaintBorderFilter(0x00FF00), "/icons/invert_filter.jpg"));//green
+           Add(new EffectItem(new PaintBorderFilter(0x0000FF), "/icons/invert_filter.jpg"));//blue
+           Add(new EffectItem(new PaintBorderFilter(0xFFFF00), "/icons/invert_filter.jpg"));//yellow
+           Add(new EffectItem(new LomoFilter(), "/icons/invert_filter.jpg"));
+
           //v0.1
           Add(new EffectItem(new InvertFilter(), "/icons/invert_filter.jpg"));
           Add(new EffectItem(new BlackWhiteFilter(), "/icons/blackwhite_filter.jpg"));
@@ -55,19 +69,7 @@ namespace ImageFilterForWP.ViewModels
           Add(new EffectItem(new NightVisionFilter(), "/icons/nightvision_filter.jpg"));
 
 
-          //v0.2
-          Add(new EffectItem(new ComicFilter(), "/icons/invert_filter.jpg"));
-          Add(new EffectItem(new SceneFilter(5f, Gradient.Scene()), "/icons/invert_filter.jpg"));
-          Add(new EffectItem(new SceneFilter(5f, Gradient.Scene1()), "/icons/invert_filter.jpg"));
-          Add(new EffectItem(new SceneFilter(5f, Gradient.Scene2()), "/icons/invert_filter.jpg"));
-          Add(new EffectItem(new SceneFilter(5f, Gradient.Scene3()), "/icons/invert_filter.jpg"));
-          Add(new EffectItem(new FilmFilter(80f), "/icons/invert_filter.jpg"));//
-          Add(new EffectItem(new FocusFilter(), "/icons/invert_filter.jpg"));//
-          Add(new EffectItem(new CleanGlassFilter(), "/icons/invert_filter.jpg"));//
-          Add(new EffectItem(new PaintBorderFilter(0x00FF00), "/icons/invert_filter.jpg"));//green
-          Add(new EffectItem(new PaintBorderFilter(0x0000FF), "/icons/invert_filter.jpg"));//blue
-          Add(new EffectItem(new PaintBorderFilter(0xFFFF00), "/icons/invert_filter.jpg"));//yellow
-          Add(new EffectItem(new LomoFilter(), "/icons/invert_filter.jpg"));
+          
           
       }
    }

@@ -38,7 +38,7 @@ namespace HaoRan.ImageFilter
             Image clone = imageIn.clone();
             imageIn = gradientFx.process(imageIn);
             ImageBlender blender = new ImageBlender();
-            blender.Mode = BlendMode.ColorBurn;
+            blender.Mode = BlendMode.Subractive;
             return saturationFx.process(blender.Blend(clone, imageIn));
             //return imageIn;// saturationFx.process(imageIn);
         }
