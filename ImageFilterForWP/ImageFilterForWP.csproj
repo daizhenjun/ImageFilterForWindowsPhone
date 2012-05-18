@@ -76,6 +76,11 @@
     <Compile Include="ImageFilter\BlockPrintFilter.cs" />
     <Compile Include="ImageFilter\BrickFilter.cs" />
     <Compile Include="ImageFilter\BrightContrastFilter.cs" />
+    <Compile Include="ImageFilter\CleanGlassFilter.cs" />
+    <Compile Include="ImageFilter\ComicFilter.cs" />
+    <Compile Include="ImageFilter\FilmFilter.cs" />
+    <Compile Include="ImageFilter\FocusFilter.cs" />
+    <Compile Include="ImageFilter\PaintBorderFilter.cs" />
     <Compile Include="ImageFilter\ColorQuantizeFilter.cs" />
     <Compile Include="ImageFilter\ConvolutionFilter.cs" />
     <Compile Include="ImageFilter\EdgeFilter.cs" />
@@ -89,6 +94,7 @@
     <Compile Include="ImageFilter\ImageBlender.cs" />
     <Compile Include="ImageFilter\InvertFilter.cs" />
     <Compile Include="ImageFilter\LightFilter.cs" />
+    <Compile Include="ImageFilter\LomoEffect.cs" />
     <Compile Include="ImageFilter\MistFilter.cs" />
     <Compile Include="ImageFilter\MonitorFilter.cs" />
     <Compile Include="ImageFilter\MosaicFilter.cs" />
@@ -105,6 +111,7 @@
     <Compile Include="ImageFilter\ReflectionFilter.cs" />
     <Compile Include="ImageFilter\ReliefFilter.cs" />
     <Compile Include="ImageFilter\SaturationModifyFilter.cs" />
+    <Compile Include="ImageFilter\SceneFilter.cs" />
     <Compile Include="ImageFilter\SepiaFilter.cs" />
     <Compile Include="ImageFilter\SmashColorFilter.cs" />
     <Compile Include="ImageFilter\ThresholdFilter.cs" />
