@@ -33,9 +33,16 @@ namespace HaoRan.ImageFilter
                 Y = y;
             }
         }
-        public float Radius = 0.5f;
-        public float Distortion = 1.5f;
+        public float Radius = 1f;
+        public float Distortion = 1f;
         public Point Center = new Point(0.5f, 0.5f);
+
+        public RadialDistortionFilter() { }
+        public RadialDistortionFilter(float radius, float distortion)
+        {
+            Radius = radius;
+            Distortion = distortion;
+        }
 
         //@Override
         public virtual Image process(Image imageIn)
@@ -52,7 +59,7 @@ namespace HaoRan.ImageFilter
                 for (int y = 0; y < height; y++)
                 {
                     float pos = 1f - ((float)Math.Sqrt((double)(((x - realxpos) * (x - realxpos)) + (y - realypos) * (y - realypos))) / realradius);
-                    if (pos > 0f)
+                    if (pos <= 0f)
                     {
                         pos = 1f - (Distortion * pos * pos);
                         float pos1 = (x - realxpos) * pos + realxpos;

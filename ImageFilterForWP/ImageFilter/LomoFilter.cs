@@ -46,7 +46,7 @@ namespace HaoRan.ImageFilter
             imageIn = this.gradientMapFx.process(tempImg);
             imageIn = this.blender.Blend(imageIn, tempImg);
             imageIn = this.vignetteFx.process(imageIn);
-            return imageIn;
+            return tempImg;
         }
     }
 }

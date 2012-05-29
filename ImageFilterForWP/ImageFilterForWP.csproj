@@ -120,6 +120,7 @@
     <Compile Include="ImageFilter\VintageFilter.cs" />
     <Compile Include="ImageFilter\WaterWaveFilter.cs" />
     <Compile Include="ImageFilter\XRadiationFilter.cs" />
+    <Compile Include="ImageFilter\ZoomBlurFilter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
