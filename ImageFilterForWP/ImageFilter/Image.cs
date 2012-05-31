@@ -281,5 +281,22 @@ namespace HaoRan.ImageFilter
             this.colorArray = colorArray;
         }
 
+        public static int SAFECOLOR(int a)
+        {
+            if (a < 0)
+                return 0;
+            else if (a > 255)
+                return 255;
+            else
+                return a;
+        }
+
+        public static int rgb(int r, int g, int b)
+        {
+            return (255 << 24) + (r << 16) + (g << 8) + b;
+        }
+
+       
+        
     }
 }

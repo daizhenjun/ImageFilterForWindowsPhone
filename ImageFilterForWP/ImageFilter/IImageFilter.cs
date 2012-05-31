@@ -21,5 +21,41 @@ namespace HaoRan.ImageFilter
     public interface IImageFilter
     {
         Image process(Image imageIn);
+
+        
+    }
+
+   
+    public static class Function
+    {
+        public static double LIB_PI = 3.14159265358979323846;  
+
+
+        //-------------------------------------------------------------------------------------
+        // basic function
+        //-------------------------------------------------------------------------------------
+        // bound in [tLow, tHigh]
+        public static int FClamp(int t, int tLow, int tHigh)
+        {
+            if (t < tHigh)
+            {
+                return ((t > tLow) ? t : tLow);
+            }
+            return tHigh;
+        }
+
+        public static double FClampDouble(double t, double tLow, double tHigh)
+        {
+            if (t < tHigh)
+            {
+                return ((t > tLow) ? t : tLow);
+            }
+            return tHigh;
+        }
+
+        public static int FClamp0255(double d)
+        {
+            return (int)(FClampDouble(d, 0.0, 255.0) + 0.5);
+        }
     }
 }
