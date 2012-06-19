@@ -19,6 +19,8 @@
 
 using System;
 using System.Windows.Media.Imaging;
+using System.Windows.Resources;
+using System.Windows;
 
 namespace HaoRan.ImageFilter
 {
@@ -296,7 +298,15 @@ namespace HaoRan.ImageFilter
             return (255 << 24) + (r << 16) + (g << 8) + b;
         }
 
-       
+
+        public static Image LoadImage(string path) 
+        {
+            Uri uri = new Uri(path, UriKind.Relative);
+            StreamResourceInfo resourceInfo = Application.GetResourceStream(uri);
+            BitmapImage bmp = new BitmapImage();
+            bmp.SetSource(resourceInfo.Stream);
+            return new Image(new WriteableBitmap(bmp));
+        }
         
     }
 }

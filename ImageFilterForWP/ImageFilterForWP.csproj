@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
@@ -85,13 +86,21 @@
     <Compile Include="ImageFilter\Distort\RippleFilter.cs" />
     <Compile Include="ImageFilter\Distort\TwistFilter.cs" />
     <Compile Include="ImageFilter\Distort\WaveFilter.cs" />
+    <Compile Include="ImageFilter\FillPatternFilter.cs" />
     <Compile Include="ImageFilter\FilmFilter.cs" />
     <Compile Include="ImageFilter\FocusFilter.cs" />
     <Compile Include="ImageFilter\GammaFilter.cs" />
+    <Compile Include="ImageFilter\HslColor.cs" />
+    <Compile Include="ImageFilter\HslModifyFilter.cs" />
     <Compile Include="ImageFilter\IllusionFilter.cs" />
     <Compile Include="ImageFilter\LensFlareFilter.cs" />
     <Compile Include="ImageFilter\LomoFilter.cs" />
     <Compile Include="ImageFilter\LUTFilter.cs" />
+    <Compile Include="ImageFilter\Math\Complex.cs" />
+    <Compile Include="ImageFilter\Math\ComplexImage.cs" />
+    <Compile Include="ImageFilter\Math\FourierTransform.cs" />
+    <Compile Include="ImageFilter\Math\Tools.cs" />
+    <Compile Include="ImageFilter\MirrorFilter.cs" />
     <Compile Include="ImageFilter\PaintBorderFilter.cs" />
     <Compile Include="ImageFilter\ColorQuantizeFilter.cs" />
     <Compile Include="ImageFilter\ConvolutionFilter.cs" />
@@ -131,6 +140,14 @@
     <Compile Include="ImageFilter\SmashColorFilter.cs" />
     <Compile Include="ImageFilter\SoftGlowFilter.cs" />
     <Compile Include="ImageFilter\SupernovaFilter.cs" />
+    <Compile Include="ImageFilter\Textures\CloudsTexture.cs" />
+    <Compile Include="ImageFilter\Textures\ITextureGenerator.cs" />
+    <Compile Include="ImageFilter\Textures\LabyrinthTexture.cs" />
+    <Compile Include="ImageFilter\Textures\MarbleTexture.cs" />
+    <Compile Include="ImageFilter\Textures\PerlinNoise.cs" />
+    <Compile Include="ImageFilter\Textures\TextileTexture.cs" />
+    <Compile Include="ImageFilter\Textures\Texturer.cs" />
+    <Compile Include="ImageFilter\Textures\WoodTexture.cs" />
     <Compile Include="ImageFilter\ThreeDGridFilter.cs" />
     <Compile Include="ImageFilter\ThresholdFilter.cs" />
     <Compile Include="ImageFilter\TileReflectionFilter.cs" />
@@ -139,6 +156,7 @@
     <Compile Include="ImageFilter\VintageFilter.cs" />
     <Compile Include="ImageFilter\WaterWaveFilter.cs" />
     <Compile Include="ImageFilter\XRadiationFilter.cs" />
+    <Compile Include="ImageFilter\YCBCrLinearFilter.cs" />
     <Compile Include="ImageFilter\ZoomBlurFilter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -226,6 +244,12 @@
     <Content Include="icons\smashcolor_filter.jpg" />
     <Content Include="icons\softglow_filter.jpg" />
     <Content Include="icons\supernova_filter.jpg" />
+    <Resource Include="icons\texture1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icons\texture2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="icons\threedgrid_filter.jpg" />
     <Content Include="icons\threshold_filter.jpg" />
     <Content Include="icons\tilereflection_filter.jpg" />
