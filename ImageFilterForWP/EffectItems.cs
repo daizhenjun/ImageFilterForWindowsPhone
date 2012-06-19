@@ -12,38 +12,40 @@ namespace ImageFilterForWP.ViewModels
    {
        public EffectItems()
        {
-           //93种效果
-
+           //95种效果
+         
            //v0.4 
-           Add(new EffectItem(new FillPatternFilter("/ImageFilterForWP;component/icons/texture1.png"), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new FillPatternFilter("/ImageFilterForWP;component/icons/texture2.png"), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new MirrorFilter(true), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new MirrorFilter(false), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new YCBCrLinearFilter(new YCBCrLinearFilter.Range(-0.3f, 0.3f)), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new YCBCrLinearFilter(new YCBCrLinearFilter.Range(-0.276f, 0.163f), new YCBCrLinearFilter.Range(-0.202f, 0.5f)), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new Texturer(new CloudsTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new Texturer(new LabyrinthTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new Texturer(new MarbleTexture(), 1.8, 0.8), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new Texturer(new WoodTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new Texturer(new TextileTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(20f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(40f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(60f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(80f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(100f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(150f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(200f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(250f), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new HslModifyFilter(300f), "/icons/zoomblur_filter.jpg"));
+           Add(new EffectItem(new TileReflectionFilter(20, 8, 45, 1), "/icons/tilereflection_filter.jpg"));
+           Add(new EffectItem(new TileReflectionFilter(20, 8, 45, 2), "/icons/tilereflection_filter.jpg"));
+           //Add(new EffectItem(new FillPatternFilter("/ImageFilterForWP;component/icons/texture1.png"), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new FillPatternFilter("/ImageFilterForWP;component/icons/texture2.png"), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new MirrorFilter(true), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new MirrorFilter(false), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new YCBCrLinearFilter(new YCBCrLinearFilter.Range(-0.3f, 0.3f)), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new YCBCrLinearFilter(new YCBCrLinearFilter.Range(-0.276f, 0.163f), new YCBCrLinearFilter.Range(-0.202f, 0.5f)), "/icons/zoomblur_filter.jpg"));
+           Add(new EffectItem(new TexturerFilter(new CloudsTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new TexturerFilter(new LabyrinthTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new TexturerFilter(new MarbleTexture(), 1.8, 0.8), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new TexturerFilter(new WoodTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new TexturerFilter(new TextileTexture(), 0.8, 0.8), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(20f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(40f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(60f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(80f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(100f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(150f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(200f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(250f), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new HslModifyFilter(300f), "/icons/zoomblur_filter.jpg"));
 
            //v0.3
-           Add(new EffectItem(new ZoomBlurFilter(30), "/icons/zoomblur_filter.jpg"));
-           Add(new EffectItem(new ThreeDGridFilter(16, 100), "/icons/threedgrid_filter.jpg"));
-           Add(new EffectItem(new ColorToneFilter(Image.rgb(254, 168, 33), 192), "/icons/colortone_filter.jpg"));
-           Add(new EffectItem(new ColorToneFilter(0x00FF00, 192), "/icons/colortone_filter2.jpg"));//green
-           Add(new EffectItem(new ColorToneFilter(0x0000FF, 192), "/icons/colortone_filter3.jpg"));//blue
-           Add(new EffectItem(new ColorToneFilter(0xFFFF00, 192), "/icons/colortone_filter4.jpg"));
-           Add(new EffectItem(new SoftGlowFilter(10, 0.1f, 0.1f), "/icons/softglow_filter.jpg"));
+           //Add(new EffectItem(new ZoomBlurFilter(30), "/icons/zoomblur_filter.jpg"));
+           //Add(new EffectItem(new ThreeDGridFilter(16, 100), "/icons/threedgrid_filter.jpg"));
+           //Add(new EffectItem(new ColorToneFilter(Image.rgb(254, 168, 33), 192), "/icons/colortone_filter.jpg"));
+           //Add(new EffectItem(new ColorToneFilter(0x00FF00, 192), "/icons/colortone_filter2.jpg"));//green
+           //Add(new EffectItem(new ColorToneFilter(0x0000FF, 192), "/icons/colortone_filter3.jpg"));//blue
+           //Add(new EffectItem(new ColorToneFilter(0xFFFF00, 192), "/icons/colortone_filter4.jpg"));
+           //Add(new EffectItem(new SoftGlowFilter(10, 0.1f, 0.1f), "/icons/softglow_filter.jpg"));
            Add(new EffectItem(new TileReflectionFilter(20, 8), "/icons/tilereflection_filter.jpg"));
            Add(new EffectItem(new BlindFilter(true, 96, 100, 0xffffff), "/icons/blind_filter1.jpg"));
            Add(new EffectItem(new BlindFilter(false, 96, 100, 0x000000), "/icons/blind_filter2.jpg"));

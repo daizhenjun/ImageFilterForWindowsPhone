@@ -40,10 +40,7 @@ namespace HaoRan.ImageFilter
                     r = imageIn.getRComponent(x, y) + pattern.getRComponent(xx, yy);
                     g = imageIn.getGComponent(x, y) + pattern.getGComponent(xx, yy);
                     b = imageIn.getBComponent(x, y) + pattern.getBComponent(xx, yy);
-                    r = (r > 255) ? 255 : r;
-                    g = (g > 255) ? 255 : g;
-                    b = (b > 255) ? 255 : b;
-                    imageIn.setPixelColor(x, y, r, g, b);
+                    imageIn.setPixelColor(x, y, Image.SAFECOLOR(r), Image.SAFECOLOR(g), Image.SAFECOLOR(b));
                 }
             }
             return imageIn;

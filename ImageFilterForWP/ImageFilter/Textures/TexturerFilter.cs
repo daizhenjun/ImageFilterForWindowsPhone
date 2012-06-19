@@ -6,8 +6,6 @@
 namespace HaoRan.ImageFilter
 {
 	using System;
-    //using System.Drawing;
-    //using System.Drawing.Imaging;
 
 	/// <summary>
 	/// Texturer filter
@@ -15,7 +13,7 @@ namespace HaoRan.ImageFilter
     /// 
     /// <remarks>Adjust pixel colors using factors from texture.</remarks>
     /// 
-    public class Texturer : IImageFilter
+    public class TexturerFilter : IImageFilter
 	{
         // texture generator
 		private ITextureGenerator textureGenerator;
@@ -81,7 +79,7 @@ namespace HaoRan.ImageFilter
         /// 
         /// <param name="texture">Generated texture</param>
         /// 
-		public Texturer( float[,] texture )
+		public TexturerFilter( float[,] texture )
 		{
 			this.texture = texture;
 		}
@@ -94,7 +92,7 @@ namespace HaoRan.ImageFilter
         /// <param name="filterLevel">Filter level value</param>
         /// <param name="preserveLevel">Preserve level value</param>
         /// 
-		public Texturer( float[,] texture, double filterLevel, double preserveLevel )
+		public TexturerFilter( float[,] texture, double filterLevel, double preserveLevel )
 		{
 			this.texture        = texture;
 			this.filterLevel    = filterLevel;
@@ -107,7 +105,7 @@ namespace HaoRan.ImageFilter
         /// 
         /// <param name="generator">Texture generator</param>
         /// 
-		public Texturer( ITextureGenerator generator )
+		public TexturerFilter( ITextureGenerator generator )
 		{
 			this.textureGenerator = generator;
 		}
@@ -120,7 +118,7 @@ namespace HaoRan.ImageFilter
         /// <param name="filterLevel">Filter level value</param>
         /// <param name="preserveLevel">Preserve level value</param>
         /// 
-        public Texturer( ITextureGenerator generator, double filterLevel, double preserveLevel )
+        public TexturerFilter(ITextureGenerator generator, double filterLevel, double preserveLevel)
 		{
 			this.textureGenerator   = generator;
 			this.filterLevel        = filterLevel;
