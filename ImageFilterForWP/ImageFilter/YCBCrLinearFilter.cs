@@ -80,7 +80,7 @@ namespace HaoRan.ImageFilter
                     rgb.B = (byte)imageIn.getBComponent(x, y);
 
                     // convert to YCbCr
-                    YCbCr.FromRGB(rgb, ycbcr);
+                    ycbcr = YCbCr.FromRGB(rgb, ycbcr);
 
                     // correct Y
                     if (ycbcr.Y >= inY.Max)
@@ -181,7 +181,7 @@ namespace HaoRan.ImageFilter
             /// <param name="rgb">Source color in <b>RGB</b> color space.</param>
             /// <param name="ycbcr">Destination color in <b>YCbCr</b> color space.</param>
             /// 
-            public static void FromRGB(Color rgb, YCbCr ycbcr)
+            public static YCbCr FromRGB(Color rgb, YCbCr ycbcr)
             {
                 float r = (float)rgb.R / 255;
                 float g = (float)rgb.G / 255;
@@ -190,6 +190,7 @@ namespace HaoRan.ImageFilter
                 ycbcr.Y = (float)(0.2989 * r + 0.5866 * g + 0.1145 * b);
                 ycbcr.Cb = (float)(-0.1687 * r - 0.3313 * g + 0.5000 * b);
                 ycbcr.Cr = (float)(0.5000 * r - 0.4184 * g - 0.0816 * b);
+                return ycbcr;
             }
 
             /// <summary>

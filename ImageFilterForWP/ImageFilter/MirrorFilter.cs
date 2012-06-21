@@ -23,7 +23,7 @@ namespace HaoRan.ImageFilter
         /**
           * 镜子方向
           */
-        public bool IsHorizontal = true;
+        private bool IsHorizontal = true;
     
         public MirrorFilter(bool IsHorizontal)
         {
