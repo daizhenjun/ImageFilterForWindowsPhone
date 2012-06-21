@@ -252,7 +252,7 @@
     <Content Include="icons\reflection2_filter.jpg" />
     <Content Include="icons\relief_filter.jpg" />
     <Content Include="icons\saturationmodify_filter.jpg" />
-    <Resource Include="icons\sepia_filter.jpg" />
+    <Content Include="icons\sepia_filter.jpg" />
     <Content Include="icons\sharp_filter.jpg" />
     <Content Include="icons\shift_filter.jpg" />
     <Content Include="icons\smashcolor_filter.jpg" />
